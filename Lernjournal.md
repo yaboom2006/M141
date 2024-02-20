@@ -10,8 +10,8 @@ Der DB-Client sind Clients die von den Diensten des Servers profitieren und die 
 Der DB-Server ist die eigene Datenbank mit den Dateisystemen und den Daten.
 
 Beim Tier-3 Modell ist es fast das gleiche wie beim Client/Server Modell, nur dass das Aufrufen der Datenbank und das Bearbeiten nicht auf der gleichen Schicht sind. Aufgerufen wird es per CLient und bearbeitet per Anwendungs-Server. Der DB Server ist wieder die Datenbank.
-
-
+<br>
+<br>
 Hier die Vor- und Nachteile und Typische Anwendungsfällen.
 
 ![](Überblick-Datenbank.png)
