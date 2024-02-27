@@ -60,3 +60,19 @@ ALTER TABLE Personen MODIFY Nachname VARCHAR(100) CHARACTER SET utf8mb4 COLLATE 
 Im phpMyqdmin kann man auf dem Dashboard die Kollation auswählen: <br>
 
 ![](Kollation-myadmin.png)
+
+
+| **Tätigkeit**                         | **SQL-Befehl**                                               | **Grp** | **![Achtung](../x_res/caution.png)** |
+| 1) alle Daten einer Tabelle anzeigen  | SELECT * FROM (Table Name)                                        | DML     | Der Befehl kann gefährlich werden wenn man mega viele Sachen hat in der Datenbank hat |
+| 2) Datenbank auswählen                | USE (Database Name)                                               | DCL     | Ist nicht gefährlich |
+| 3) eine neue Datenbank erstellen      | CREATE (Database Name)                                            | DDL     | Kann zu Verwechslungen führen wenn doppelte Einträge vorhanden sind |
+| 4) eine neue Tabelle erstellen        | CREATE TABLE Personen (Nachname VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci) | DDL | Kann zu Verwechslungen führen wenn doppelte Einträge vorhanden sind |
+| 5) eine Tabelle löschen               | DROP TABLE (Table Name)                                           | DDL     | Ist gefährlich, kann nicht rückgängig gemacht werden, ausser mit Rollback |
+| 6) Tabellenstruktur **kontrollieren** |
+| 7) Datenbanken anzeigen               |
+| 8) Tabellen einer DB anzeigen         |
+| 9) Daten in eine Tabelle eintragen    |
+| 10) Daten in einer Tabelle ändern     |
+| 11) Daten in einer Tabelle löschen    |
+| 12) Spalte in einer Tabelle löschen   |
+
