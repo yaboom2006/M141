@@ -63,6 +63,7 @@ Im phpMyqdmin kann man auf dem Dashboard die Kollation auswählen: <br>
 
 
 | **Tätigkeit**                         | **SQL-Befehl**                                               | **Grp** | **![Achtung](../x_res/caution.png)** |
+|---------------------------------------|--------------------------------------------------------------|---------|-------------------------------------|
 | 1) alle Daten einer Tabelle anzeigen  | SELECT * FROM (Table Name)                                        | DML     | Der Befehl kann gefährlich werden wenn man mega viele Sachen hat in der Datenbank hat |
 | 2) Datenbank auswählen                | USE (Database Name)                                               | DCL     | Ist nicht gefährlich |
 | 3) eine neue Datenbank erstellen      | CREATE (Database Name)                                            | DDL     | Kann zu Verwechslungen führen wenn doppelte Einträge vorhanden sind |
