@@ -78,6 +78,6 @@ Im phpMyqdmin kann man auf dem Dashboard die Kollation auswählen: <br>
 | 12) Spalte in einer Tabelle löschen   | ALTER TABLE [Tabellen Name] DROP COLUMN [Spalte] | DDL | Ist gefährlich, kann nicht rückgängig gemacht werden, ausser mit Rollback |
 
 
-Um die Daten in die Tabelle einzufügen kann man Workbench benutzen. Rechtklick au die Tabelle und dann Import:
+Um die Daten in die Tabelle einzufügen kann man phpmyadmin benutzen. Oben auf Import klicken und "CSV using LOAD DATA" auswählen:
 
 ![](Import.png)
