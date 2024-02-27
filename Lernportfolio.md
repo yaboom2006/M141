@@ -28,3 +28,35 @@ Hier die Vor- und Nachteile und Typische Anwendungsfällen.
 ## Tag 2
 
 ![](Verbose-mysqld.png)
+
+![](Verbose-mysql.png)
+
+
+So legt man die Kollation in SQL fest (Beispiel): <br>
+
+```mysql
+CREATE TABLE Personen (
+    Nachname VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci
+);
+```
+
+Um die Reihen zu sortieren kann man auf die Kollationen in der obersten Reihe klicken um die Spalten zu sortieren.
+
+![](Sortierung.png)
+
+
+Um Nachnamen einzufügen kann man folgendes Script benützen: <br>
+
+```mysql
+INSERT INTO Personen (Nachname) VALUES ('Müller'), ('Mueller'), ('Muller'), ('Straus'), ('Strauss'), ('Strauß'), ('Über'), ('Ueber'), ('Uber');
+```
+
+Um die Kollation in Workbench zu ändern kann man Alter Table benutzen: <br>
+
+```mysql
+ALTER TABLE Personen MODIFY Nachname VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_german2_ci;
+```
+
+Im phpMyqdmin kann man auf dem Dashboard die Kollation auswählen: <br>
+
+![](Kollation-myadmin.png)
