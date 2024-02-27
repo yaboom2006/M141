@@ -77,3 +77,7 @@ Im phpMyqdmin kann man auf dem Dashboard die Kollation auswählen: <br>
 | 11) Daten in einer Tabelle löschen    | DELETE FROM [Tabellen Name] WHERE [Bedingung] | DML | Ist gefährlich, kann nicht rückgängig gemacht werden, ausser mit Rollback |
 | 12) Spalte in einer Tabelle löschen   | ALTER TABLE [Tabellen Name] DROP COLUMN [Spalte] | DDL | Ist gefährlich, kann nicht rückgängig gemacht werden, ausser mit Rollback |
 
+
+Um die Daten in die Tabelle einzufügen kann man Workbench benutzen. Rechtklick au die Tabelle und dann Import:
+
+![](Import.png)
