@@ -23,3 +23,8 @@ cd bin
 Hier die Vor- und Nachteile und Typische Anwendungsfällen.
 
 ![](Überblick-Datenbank.png)
+
+
+## Tag 2
+
+![](Verbose-mysqld.png)
