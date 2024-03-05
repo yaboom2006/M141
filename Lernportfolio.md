@@ -81,3 +81,33 @@ Im phpMyqdmin kann man auf dem Dashboard die Kollation auswählen: <br>
 Um die Daten in die Tabelle einzufügen kann man phpmyadmin benutzen. Oben auf Import klicken und "CSV using LOAD DATA" auswählen:
 
 ![](Import.png)
+
+
+## Tag 3
+![](Locken.png)
+
+Seit Mai 2000 ist der Tabellentyp BDB (Berkley Database – Key/Value-DB) integriert, der auch Transaktionen unterstützt. Jetzt gibt es noch InnoDB und Gemini. Damit sind jetzt auch Techniken möglich, die jedes professionelle relationale Datenbanksystem einfach integriert haben muss. Der Tabellentyp von MySQL ist MyISAM und kennt keine Transaktionsunterstützung.
+
+![](Datenbanken.png)
+
+Befehle: <br>
+
+```mysql
+ALTER TABLE benutzer ENGINE = InnoDB;
+```
+
+```mysql
+SHOW TABLE STATUS LIKE 'benutzer';
+```
+<br>
+
+Standardmässig wird beim ersten Start von MySQL die Datei ibdata1 mit einer Grösse von 10 MByte (oder 12MB je nach Version) erzeugt. Sobald die darin gespeicherten InnoDB-Tabellen mehr Platz beanspruchen, wird die Datei in 8-MByte-Schritten vergrössert
+
+![](DB-Struktur.png)
+
+Wenn Sie feststellen möchten, wie viel Speicherplatz innerhalb des Tablespace noch frei ist, führen Sie folgenden SQL-Befehl aus:
+
+```mysql
+SELECT SPACE,NAME,ROUND((ALLOCATED_SIZE/1024/1024), 2) as "Tablespace Size (MB)"  FROM information_schema.INNODB_SYS_TABLESPACES ORDER BY 3 DESC;
+```
+
