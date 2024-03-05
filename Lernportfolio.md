@@ -84,7 +84,11 @@ Um die Daten in die Tabelle einzufügen kann man phpmyadmin benutzen. Oben auf I
 
 
 ## Tag 3
+
 ![](Locken.png)
+
+![](Locken2.png)
+
 
 Seit Mai 2000 ist der Tabellentyp BDB (Berkley Database – Key/Value-DB) integriert, der auch Transaktionen unterstützt. Jetzt gibt es noch InnoDB und Gemini. Damit sind jetzt auch Techniken möglich, die jedes professionelle relationale Datenbanksystem einfach integriert haben muss. Der Tabellentyp von MySQL ist MyISAM und kennt keine Transaktionsunterstützung.
 
