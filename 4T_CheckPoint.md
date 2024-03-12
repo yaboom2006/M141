@@ -79,18 +79,18 @@
       
 
 3.  Ergänzen Sie den Befehl REVOKE ... ON ... FROM ... ; mit eigenen Angaben.
-
+    ```
     REVOKE privileg ON mysql.buchung FROM user@localhost;   
-      
+    ```  
 4.  Beschreiben Sie den Begriff der MySQL-Testdatenbank.
 
     Das ist die Datenbank von welcher sich mysql selbst verwaltet,   
       
 
 5.  Mit welchem Befehl ändern Sie das Passwort von Benutzer Meier auf "abc123"?
-
+    ```
     SET PASSWORD FOR meier@localhost = password('abc123')   
-      
+    ```  
 
 6.  Geben Sie eine Erklärung für folgende Fehlermeldung.  
     
@@ -108,6 +108,6 @@
     REVOKE ALL FROM ''@localhost;  
     ERROR 1064: You have an error
     ```
-    
+    ```
     REVOKE ALL PRIVILEGES ON *.* FROM ''@localhost;
-
+    ```
