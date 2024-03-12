@@ -115,3 +115,48 @@ Wenn Sie feststellen möchten, wie viel Speicherplatz innerhalb des Tablespace n
 SELECT SPACE,NAME,ROUND((ALLOCATED_SIZE/1024/1024), 2) as "Tablespace Size (MB)"  FROM information_schema.INNODB_SYS_TABLESPACES ORDER BY 3 DESC;
 ```
 
+## Tag 4
+
+![](Berechtigungen.png)
+
+User mit Passwort erstellen:<br>
+```mysql
+CREATE USER 'user'@'hostname' IDENTIFIED BY 'Passw0rt';
+```
+Ohne Passwort ist genau das gleiche, nur ohne den Schluss:<br>
+```mysql
+CREATE USER 'user'@'hostname';
+```
+
+Berechtigungen festlegen:<br>
+```mysql
+GRANT privileg1 [, privileg2, ...]
+ON [datenbank.]tabelle
+TO user@host [IDENTIFIED BY 'passwort'] [WITH GRANT OPTION] ;
+```
+
+Berechtigungen entfernen:<br>
+```mysql
+REVOKE privileg1 [, privileg2, ...]
+ON [datenbank.]tabelle
+FROM user@host ;
+```
+
+![](Privilegien.png)
+
+Hier sieht man wie es aussieht wenn man eine Rolle erstellt zusammen mit einem Benutzer, und gleich die Rolle zuweist:<br>
+```mysql
+CREATE ROLE rolle;
+GRANT SELECT, INSERT, UPDATE, DELETE ON db.tbl TO rolle;  -- Rolle wird erzeugt
+GRANT SELECT, ... ON db.tbl TO user@hostname IDENTIFIED BY 'Passw0rd'; -- User wird erzeugt!
+GRANT rolle TO user@hostname;  -- Rolle wird User übertragen                     
+FLUSH PRIVILEGES;                                  -- Aktivierung -- nie vergessen!
+
+SELECT CURRENT_ROLE;  -- Aktive Rollen für aktuellen Benutzer werden angezeigt (Standard NULL - also keine)
+SET ROLE rolle;       -- Rollen dem aktuellen User zuordnen
+```
+
+So könnte eine Zugriffsmatrix aussehen. D = DELETE, U = UPDATE, S = SELECT, I = INSERT<br>
+
+![](Matrix.png)
+
