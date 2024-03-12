@@ -12,9 +12,9 @@
 
     - [ ] Prüfung der Privilegien des Benutzers
 
-    - [ ] Antwort auf die Frage Wer?
+    - [x] Antwort auf die Frage Wer?
 
-    - [ ] Identitätsprüfung
+    - [x] Identitätsprüfung
 
     - [ ] Antwort auf die Frage Was?
 
@@ -22,7 +22,7 @@
 
     - [ ] sofort nach Eingabe der Änderung
 
-    - [ ] nach dem Befehl FLUSH PRIVILEGES
+    - [x] nach dem Befehl FLUSH PRIVILEGES
 
     - [ ] nach dem Neustart des DB-Servers
 
@@ -30,7 +30,7 @@
 
 3.  Was bewirkt der SQL-Befehl GRANT ... ON ... TO ...;
 
-    - [ ] Privileg(ien) erteilen
+    - [x] Privileg(ien) erteilen
 
     - [ ] Privileg(ien) wegnehmen
 
@@ -46,21 +46,21 @@
 
     - [ ] SHOW TABLES;
 
-    - [ ] SHOW GRANTS FOR ... ;
+    - [x] SHOW GRANTS FOR ... ;
 
 5.  Welches sind die beiden wichtigsten DCL-Befehle (data control)?
 
-    - [ ] SELECT
+    - [x] SELECT
 
     - [ ] REVOKE
 
-    - [ ] DELETE
+    - [x] DELETE
 
     - [ ] GRANT
     
 1.  Was ist nötig, dass Benutzer "meier" keinen Zugang mehr auf den DB-Server hat.
 
-    - [ ] in Systemtabelle user für diesen Benutzer jedes Privileg auf "N" setzen
+    - [x] in Systemtabelle user für diesen Benutzer jedes Privileg auf "N" setzen
 
     - [ ] mit DELETE FROM user WHERE user = 'meier'; und FLUSH PRIVILEGES;
 
@@ -70,26 +70,26 @@
 
 1.  Erklären Sie den Begriff "Autorisierung" im Zusammenhang mit einem DB-Server.
 
-    __   
+    Autorisierung ist wenn abgefragt wird was für Berechtigungen der Benutzer hat.  
       
 
 2.  Wann wird das Schlüsselwort IDENTIFIED BY verwendet?
 
-    __   
+    Beim CREATE USER Command um dem Benutzer ein Passwort zuzuweisen.   
       
 
 3.  Ergänzen Sie den Befehl REVOKE ... ON ... FROM ... ; mit eigenen Angaben.
 
-    __   
+    REVOKE privileg ON mysql.buchung FROM user@localhost;   
       
 4.  Beschreiben Sie den Begriff der MySQL-Testdatenbank.
 
-    __   
+    Das ist die Datenbank von welcher sich mysql selbst verwaltet,   
       
 
 5.  Mit welchem Befehl ändern Sie das Passwort von Benutzer Meier auf "abc123"?
 
-    __   
+    SET PASSWORD FOR meier@localhost = password('abc123')   
       
 
 6.  Geben Sie eine Erklärung für folgende Fehlermeldung.  
@@ -99,7 +99,7 @@
     ERROR 1045: Access denied for user: '@127.0.0.1'
     ```
     
-    __   
+    Der Benutzer hat keine Berechtigung um auf den Server zuzugreifen.   
       
 
 7.  Korrigieren Sie den folgenden Befehl:  
@@ -109,5 +109,5 @@
     ERROR 1064: You have an error
     ```
     
-    __
+    REVOKE ALL PRIVILEGES ON *.* FROM ''@localhost;
 
