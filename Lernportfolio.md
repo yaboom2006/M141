@@ -160,3 +160,33 @@ So könnte eine Zugriffsmatrix aussehen. D = DELETE, U = UPDATE, S = SELECT, I =
 
 ![](Matrix.png)
 
+<br>
+<br>
+Erstellen Sie die zwei Rollen varkauf und management:<br>
+```mysql
+CREATE ROLE varkauf, management;
+```
+<br>
+Erstellen Sie pro Gruppe einen Benutzer:
+```mysql
+CREATE USER user1@localhost, user2@localhost;
+GRANT varkauf TO user1@localhost;
+GRANT management TO user2@localhost;
+```
+<br>
+Um die Berechtigungen festzulegen habe ich folgendes gemacht:<br>
+```mysql
+GRANT SELECT, UPDATE, INSERT, DELETE ON hotel.buchung TO user1@localhost;
+````
+Ich habe einfach die hotel Datenbank genommen weil ich die gut fand.
+Ich habe die Rollen sowie auch die Benutzer und Table Berechtigungen im mysql.user und mysql.global.priv gefunden. Auch das einloggen hat funktioniert.
+Als ich mir die Datenbanken anzeigen liess, sah ich nur mysql und test. Dann habe ich die Rolle festgelegt:<br>
+```mysql
+SET ROLE varkauf;
+```
+Danach habe ich auch die hotel Datenbank gesehn und konnte sie bedienen.<br>
+Gelöscht habe ich die Rollen und Benutzer wie folgt:<br>
+```mysql
+DROP ROLE varkauf, management;
+DROP USER user1@localhost, user2@localhost;
+```
