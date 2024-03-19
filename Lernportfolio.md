@@ -190,3 +190,22 @@ Gelöscht habe ich die Rollen und Benutzer wie folgt:<br>
 DROP ROLE varkauf, management;
 DROP USER user1@localhost, user2@localhost;
 ```
+
+## Tag 5
+
+Verbindung zum DB-Servertesten:<br>
+```mysql
+mysqladmin -h 172.19.176.1 ping
+```
+<br>
+
+Über das Netz auf die DB zugreifen:<br>
+```mysql
+mysql -h 172.19.176.1
+```
+<br>
+
+Backup und Restore über das Netz ausführen:<br>
+```mysql
+mysqldump -h 172.19.176.1 [datenbank] \> [datei z.B. datei.txt]
+```
