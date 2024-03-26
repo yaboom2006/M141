@@ -81,7 +81,7 @@
 
 3.  Wie erreichen Sie, dass Änderungen in der Konfigurationsdatei wirksam werden?
 
-    FLUSH LOGS   
+    Den Server neustarten   
       
 
 4.  Durch welche Daten wird der von einer DB benötigte Speicherplatz bestimmt?
@@ -106,22 +106,22 @@
 
 8.  Geben Sie für jede Protokolldatei an, wie Sie deren Inhalt kontrollieren.
 
-    ___   
+    Mit mysqlbinlog kann man die Binären Logs anschauen, sonst im ensprechenden Pfad.   
       
 
 9.  Wie beeinflusst der Parameter --opt beim Erstellen eines Backup das Tabellenlocking?
 
-    ___   
+    Es erhöht die geschwindigkeit, da es Tables sperrt.
       
 
 10. Beschreiben Sie das Vorgehen, um Daten von MySQL nach ORACLE zu migrieren.
 
-    ___   
+    Man exportiert die Daten in ein CSV File und importiert dieses.   
       
 
 11. Beschreiben Sie eine praktische Anwendung für den READ-Lock.
 
-    ___   
+    Es wird verwendet, das wenn jemand eine Datei liest, diese nicht verändert wird.
     
     
 ---
@@ -134,11 +134,11 @@
 
     - [ ] Indexe möglichst vermeiden
 
-    - [ ] Serverparameter einstellen
+    - [x] Serverparameter einstellen
 
-    - [ ] Transaktionen verwenden
+    - [x] Transaktionen verwenden
 
-    - [ ] Locks verwenden
+    - [x] Locks verwenden
 
 2.  Wie werden Daten schneller in eine DB-Tabelle geladen?
 
@@ -146,19 +146,19 @@
 
     - [ ] durch Verwenden des Parameters --opt beim Erstellen des Backup-Skripts
 
-    - [ ] durch Importieren der Daten aus einer Textdatei
+    - [x] durch Importieren der Daten aus einer Textdatei
 
     - [ ] durch Verwenden von vielen INSERT-Befehlen
 
 3.  Was trifft auf den Befehl OPTIMIZE TABLE zu?
 
-    - [ ] entfernt nicht genutzten Speicherplatz aus MyISAM-Tabellendateien
+    - [x] entfernt nicht genutzten Speicherplatz aus MyISAM-Tabellendateien
 
     - [ ] ist auf MyISAM- und InnoDB-Tabellen anwendbar
 
     - [ ] wird angewendet bei Tabellen, die häufig abgefragt werden
 
-    - [ ] defragmentiert DB-Dateien
+    - [x] defragmentiert DB-Dateien
 
 4.  Wie finden Sie langsame DB-Abfragen?
 
@@ -166,7 +166,7 @@
 
     - [ ] im Query Log
 
-    - [ ] im Slow Query Log
+    - [x] im Slow Query Log
 
     - [ ] im Error Log
 
@@ -174,9 +174,9 @@
 
     - [ ] Abfragen, die LIKE enthalten, können immer optimiert werden
 
-    - [ ] Indexe beschleunigen Abfragen
+    - [x] Indexe beschleunigen Abfragen
 
-    - [ ] Indexe werden allgemein auf Schlüsselattribute gelegt
+    - [x] Indexe werden allgemein auf Schlüsselattribute gelegt
 
     - [ ] durch Indexe werden DB-Einträge und -änderungen schneller
     
@@ -184,58 +184,58 @@
 
     - [ ] um Daten schneller in die DB zu laden
 
-    - [ ] immer im Zusammenhang mit SELECT
+    - [x] immer im Zusammenhang mit SELECT
 
-    - [ ] um langsame Abfragen zu finden
+    - [x] um langsame Abfragen zu finden
 
-    - [ ] um zu erkennen, wie sich ein Index auf die Geschwindigkeit einer Abfrage auswirkt
+    - [x] um zu erkennen, wie sich ein Index auf die Geschwindigkeit einer Abfrage auswirkt
 
 1.  Welches sind Gründe für die Verwendung eines Index?
 
     - [ ] um das Eintragen von Daten in Tabellen bei Unique-Attributen zu beschleunigen
 
-    - [ ] um DB-Abfragen zu beschleunigen
+    - [x] um DB-Abfragen zu beschleunigen
 
     - [ ] um das Ändern von Daten zu verlangsamen
 
-    - [ ] um einmalige Werte zu gewährleisten
+    - [x] um einmalige Werte zu gewährleisten
     
 1.  Nennen Sie Ziele der DB-Optimierung?
 
-    ___   
+    Um die Gechwindigkeit und nutzung zu erhöhen.
       
 
 2.  Was wird optimiert, um die Geschwindigkeit eines DB-Servers zu verbessern?
 
-    ___   
+    Der Index. 
       
 
 3.  Mit welchen 2 prinzipiellen Massnahmen werden DB-Abfragen beschleunigt?
 
-    ___   
+    Mit dem Index und schreiben von effizienten SQL Abfragen.
       
 
 4.  Beschreiben Sie kurz, wie Sie den Befehl EXPLAIN verwenden.
 
-    ___   
+    Mit der SELeCT Abfrage, somit wird der Befehl erklärt.   
       
 
 5.  Wozu wird der Befehl OPTIMIZE TABLE angewendet?
 
-    ___   
+    Es optimiert die Tabellen indem es z.B. Fragmentierung entfernt.   
       
 
 6.  Wie werden SELECT-Befehle optimiert?
 
-    ___   
+    Anstatt von * kann man die genau angeben was man braucht. Man kann auch LIMIT benutzen um eine optimierung zu erzielen.   
       
 
 7.  Wie viele DB-Tabellen können standardmässig gleichzeitig geöffnet sein?
 
-    ___   
+    Standardmässig gibt es keine Grenze, die kann aber konfiguriert werden.   
       
 
 8.  Wie schalten Sie den Query Cache ein bzw. aus?
 
-    ___   
+    Entweder mit SET GLOBAL query_cache_size = (Zahl in MB), oder indem man in der Konfigurationdatei query_cache_type auf 1 stellt.   
       
