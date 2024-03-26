@@ -12,15 +12,15 @@
 
     - [ ] mit einem INSERT-Befehl
 
-    - [ ] durch Eintrag auf der Kommandozeile
+    - [x] durch Eintrag auf der Kommandozeile
 
-    - [ ] durch Eintrag in einer Konfigurationsdatei
+    - [x] durch Eintrag in einer Konfigurationsdatei
 
     - [ ] durch Eintrag in einem Logfile
 
 3.  Welcher Konfigurationsparameter legt fest, wo die Log-Dateien abgelegt werden?
 
-    - [ ] basedir
+    - [x] basedir
 
     - [ ] datadir
 
@@ -36,13 +36,13 @@
 
     - [ ] [mysqldump]
 
-    - [ ] [mysqld]
+    - [x] [mysqld]
 
 5.  Wozu kann der DB-Client mysqlshow verwendet werden?
 
     - [ ] Backup erstellen
 
-    - [ ] DB-Schema anzeigen
+    - [x] DB-Schema anzeigen
 
     - [ ] Verbindung zum DB-Server testen
 
@@ -50,13 +50,13 @@
 
 6.  Mit welchem Log-File bestimmen Sie den letzten Start des MySQL-Servers?
 
-    - [ ] Error Log
+    - [x] Error Log
 
     - [ ] Update Log
 
     - [ ] Query Log
 
-	 - [ ] Transaction Log
+	- [ ] Transaction Log
 	 
 1.  Welcher Eintrag im Konfigurationsfile schaltet die Protokollierung aller User-Login ein?
 
@@ -64,13 +64,13 @@
 
     - [ ] log-slow-queries
 
-    - [ ] log
+    - [x] log
 
     - [ ] log-error=C:/log/err.log
 
 2.  Wie restaurieren Sie nach einem Server-Ausfall eine DB vollständig?
 
-    - [ ] Einlesen des letzten Backup
+    - [x] Einlesen des letzten Backup
 
     - [ ] Verwenden der Option --opt beim Erstellen des Backup
 
@@ -81,27 +81,27 @@
 
 3.  Wie erreichen Sie, dass Änderungen in der Konfigurationsdatei wirksam werden?
 
-    ___   
+    FLUSH LOGS   
       
 
 4.  Durch welche Daten wird der von einer DB benötigte Speicherplatz bestimmt?
 
-    ___   
+     Benutzerdaten (Tabellendaten), Speicherplatz für Indexe (Indextabellen), Systemverwaltung (DB- und Tabellenbeschreibungen, Systemkatalog, User- und Zugriffsverwaltung)
       
 
 5.  Wozu wird das Logging (Protokollierung) verwendet?
 
-    ___   
+    Zur Protokollierung von Start, Shutdown und Fehlern. Ausserdem wer welche Daten verändert hat und auch wann.Zur Datenwiederherstellung und Aufzeichnung von aufwendigen DB-Abfragen. Logging des Master-Rechners für die DB-Synchronisierung. Durchführen von Transaktionen nach einem DB-Absturz
       
 
 6.  In welcher Log-Datei finden Sie, den Anwender, der bestimmte Daten löschte?
 
-    ___   
+    Im Query Log   
       
 
 7.  Welche Informationen finden Sie im Slow Query Log?
 
-    ___   
+    Dort werden Abfragen gezeigt, welche einen grossen Aufwand verursacht haben.   
       
 
 8.  Geben Sie für jede Protokolldatei an, wie Sie deren Inhalt kontrollieren.

@@ -212,6 +212,9 @@ mysqldump -h 172.19.176.1 [datenbank] \> [datei z.B. datei.txt]
 
 ## Tag 6
 
+![](Log-Dateien.png)
+<br>
+
 Der folgende CMD-Befehl startet den DB-Server mit der Option für Fehlermeldungen in Deutsch, aber zuerst muss man ins richtige Verzeichniss:
 ```
 cd C:\xampp\mysql\bin
