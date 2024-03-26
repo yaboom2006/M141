@@ -209,3 +209,68 @@ Backup und Restore über das Netz ausführen:<br>
 ```mysql
 mysqldump -h 172.19.176.1 [datenbank] \> [datei z.B. datei.txt]
 ```
+
+## Tag 6
+
+Der folgende CMD-Befehl startet den DB-Server mit der Option für Fehlermeldungen in Deutsch, aber zuerst muss man ins richtige Verzeichniss:
+```
+cd C:\xampp\mysql\bin
+```
+<br>
+
+Danach kann man folgenden Befehl ausführen:
+```
+mysqld --language=german
+```
+<br>
+
+Mit folgendem Befehl kann man alle Logs anzeigen lassen:
+```mysql
+SHOW VARIABLES LIKE '%log%';
+```
+<br>
+
+Error Log-Datei festlegen (Default: <basedir>\data\<host>.err):
+```mysql
+log-error=C:/log/error.txt
+```
+<br>
+
+Logging refreshen macht man mit
+```mysql
+FLUSH LOGS
+```
+<br>
+
+Während des Betriebs eines DB-Servers wird regelmässig ein Backup erstellt. Durch einen Crash können sämtliche Daten verloren gehen.
+
+![](Crash.png)
+<br>
+
+![](Restore.png)
+<br>
+
+![](Imp-Exp.png)
+<br>
+
+Der Parameter --opt umfasst folgenden Optionen:
+
+![](Parameter.png)
+<br>
+
+![](Index.png)
+<br>
+
+![](Index_Zeit_Search_Sort_klein.png)
+<br>
+
+![](Index_Insert.png)
+<br>
+
+![](Speicherparameter.png)
+<br>
+
+Beispiel dafür:
+```mysql
+SET query_cache_type=0;
+```
