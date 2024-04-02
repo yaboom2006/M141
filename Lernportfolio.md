@@ -277,3 +277,38 @@ Beispiel dafür:
 ```mysql
 SET query_cache_type=0;
 ```
+
+## Tag 7
+
+Rechte anzeigen:<br>
+```mysql
+SHOW GRANTS FOR [Benutzer];
+```
+<br>
+
+Daten laden:<br>
+```mysql
+LOAD DATA INFILE [Pfad zur Datei];
+INTO TABLE Person
+FIELDS TERMINATED BY ',' 
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n'
+IGNORE 1 ROWS;
+```
+<br>
+
+Index auf einer Tabelle erstellen und Dropen:<br>
+```mysql
+CREATE INDEX idx_AddresseId ON Person (AdresseId);
+DROP INDEX idx_AddresseId ON Person ;
+```
+<br>
+
+Doppelte Sachen finden:<br>
+```mysql
+SELECT Id FROM Adresse
+GROUP BY Id
+HAVING COUNT(Id) > 1
+```
+<br>
+
